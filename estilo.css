@@ -1,4 +1,3 @@
-
 :root {
   --cor-fundo: #121212;
   --cor-primaria: #e63946;
@@ -33,14 +32,15 @@ a:hover {
   color: var(--cor-secundaria);
 }
 
-/* HEADER */
+/* HEADER — agora rola junto com a página */
 header.topo, header {
   background-color: var(--cor-primaria);
   color: var(--cor-secundaria);
   padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+
+  /* Removido: position: sticky; top: 0; */
+  position: static;
+
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
@@ -119,7 +119,7 @@ section {
   margin-bottom: 2rem;
 }
 
-/* CARDS DE ARTIGOS */
+/* CARDS */
 article {
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
@@ -132,11 +132,6 @@ article {
 article:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-}
-
-article h2 {
-  margin-bottom: 0.5rem;
-  color: var(--cor-destaque);
 }
 
 figure img {
@@ -164,7 +159,7 @@ table th {
   color: var(--cor-fundo);
 }
 
-/* VÍDEOS RESPONSIVOS */
+/* VÍDEO */
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
